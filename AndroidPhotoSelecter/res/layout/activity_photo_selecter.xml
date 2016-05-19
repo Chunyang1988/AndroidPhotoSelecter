@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <GridView
+        android:id="@+id/gv_photo_selecter_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="#FFFFFFFF"
+        android:columnWidth="80dp"
+        android:horizontalSpacing="2dp"
+        android:listSelector="#FFFFFFFF"
+        android:numColumns="3"
+        android:verticalSpacing="2dp" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_selecter_directory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_photo_selecter_bottom"
+        android:background="#CC171717"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lv_photo_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:cacheColorHint="#FFFFFFFF"
+            android:listSelector="#FFFFFFFF" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_selecter_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CC171717"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/tv_photo_selecter_directory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="bottom"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="6dp"
+                android:text="@string/recent_photos"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_photo_selecter_directory"
+                android:layout_toRightOf="@+id/tv_photo_selecter_directory"
+                android:contentDescription="@string/empty"
+                android:paddingBottom="8dp"
+                android:paddingTop="6dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_photo_selector_hint" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_photo_selecter_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:text="@string/preview"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
